@@ -60,6 +60,11 @@ sudo systemctl enable docker
 from Sebastian Colomar (Faculty) to All Participants:
 sudo systemctl enable --now docker
 
+from Sebastian Colomar (Faculty) to All Participants:
+docker network create thomas
+from Sebastian Colomar (Faculty) to All Participants:
+docker run --detach --name nginx-thomas --network thomas --rm nginx:alpine
+
 
  
 
