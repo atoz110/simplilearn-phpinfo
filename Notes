@@ -14,3 +14,18 @@ docker build --tag simplilearn-phpinfo:test .
 docker images | grep simplilearn-phpinfo.*test
 docker history simplilearn-phpinfo:test 
 docker history simplilearn-phpinfo:test --no-trunc
+
+#knes for Alpne
+https://github.com/alpinelinux/docker-alpine/blob/37579d92b9faa70398240431bc46720242faa5e5/x86_64/Dockerfile
+
+docker run --detach --name test --rm simplilearn-phpinfo:test 
+
+sudo ls /var/lib/docker/containers/337360d74cabb5159630f2364ccd0adc1d150ba22745a9f963fcf81b57457fd8 -lh
+
+(container data)
+ls -l /var/lib/docker -d
+
+cat /etc/fstab (seperate partition for container data)
+LABEL=docker            /var/lib/docker ext4    defaults        0 0
+
+sudo tar zcf docker-backup.tgz /var/lib/docker (backup container data)
