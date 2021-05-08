@@ -1,1 +1,16 @@
 https://docs.docker.com/engine/reference/builder/
+
+git clone https://github.com/academiaonline/simplilearn-phpinfo
+cd simplilearn-phpinfo/
+git pull
+git checkout dca-2021-05
+.dockerignore
+#**/*
+#!src
+#https://github.com/academiaonline/simplilearn-phpinfo/blob/dca-2021-05/.dockerignore
+git pull
+docker build --tag simplilearn-phpinfo:test .
+
+docker images | grep simplilearn-phpinfo.*test
+docker history simplilearn-phpinfo:test 
+docker history simplilearn-phpinfo:test --no-trunc
