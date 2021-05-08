@@ -29,3 +29,37 @@ cat /etc/fstab (seperate partition for container data)
 LABEL=docker            /var/lib/docker ext4    defaults        0 0
 
 sudo tar zcf docker-backup.tgz /var/lib/docker (backup container data)
+
+how do you check what containers are running?
+from Sebastian Colomar (Faculty) to All Participants:
+ docker ps | grep test
+from Sebastian Colomar (Faculty) to All Participants:
+docker kill test
+from Sebastian Colomar (Faculty) to All Participants:
+docker ps --all
+
+docker container prune --force
+
+docker logs test
+from Thomas King to All Participants:
+To sum up: We used an existing index.php and used a Dockerfile to create an Alpine-based container with that index.php file along with the php packages. We built the container from the Dockerfile and ran it. 
+from Sebastian Colomar (Faculty) to All Participants:
+docker top test
+
+To create the docker group and add your user:
+
+Create the docker group.
+ sudo groupadd docker
+Add your user to the docker group.
+ sudo usermod -aG docker $USER
+ 
+Confired enabled
+systemctl is-enabled docker
+from Sebastian Colomar (Faculty) to All Participants:
+sudo systemctl enable docker
+from Sebastian Colomar (Faculty) to All Participants:
+sudo systemctl enable --now docker
+
+
+ 
+
