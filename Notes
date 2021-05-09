@@ -82,6 +82,11 @@ sudo ls /var/lib/docker/volumes -l
 from Sebastian Colomar (Faculty) to All Participants:
 sudo ls /var/lib/docker/volumes/data/_data -l
 
+ docker history registry:2 
+from Sebastian Colomar (Faculty) to All Participants:
+docker export --output registry.tar registry
+from Sebastian Colomar (Faculty) to All Participants:
+docker import registry.tar registry:flat
 
 
 
