@@ -66,5 +66,22 @@ from Sebastian Colomar (Faculty) to All Participants:
 docker run --detach --name nginx-thomas --network thomas --rm nginx:alpine
 
 
- 
+#Add volume
+
+docker volume create data
+docker run --detach --env MYSQL_ROOT_PASSWORD+sebastian1234 --name test --volume data:/var/lib/mysql mysql
+sudo ls /var/lib/docker/volumes/data/_data -ld
+
+Like - mount /var/lib/mysql /var/lib/docker/volumes/data
+
+sudo ls /var/lib/docker/containers -l
+from Sebastian Colomar (Faculty) to All Participants:
+sudo ls /var/lib/docker/image -ld
+from Sebastian Colomar (Faculty) to All Participants:
+sudo ls /var/lib/docker/volumes -l
+from Sebastian Colomar (Faculty) to All Participants:
+sudo ls /var/lib/docker/volumes/data/_data -l
+
+
+
 
