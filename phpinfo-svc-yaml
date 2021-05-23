@@ -6,9 +6,12 @@ metadata:
 spec:
   ports:
     # Accept traffic sent to port 80
-    - name: http
+    - name: phpinfo
       port: 80
       targetPort: 8080
+    - name: mysql
+      port: 3306
+      targetPort: 3306
   selector:
     # Loadbalance traffic across Pods matching
     # this label selector
