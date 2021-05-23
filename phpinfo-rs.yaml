@@ -22,7 +22,7 @@ spec:
           - "index.php"
           - "-S"
           - "0.0.0.0:8080"
-       - name: simplilearn-phpinfo-container2
+      - name: simplilearn-phpinfo-container2
         image: academiaonline/simplilearn-phpinfo:latest
         command:
           - "php"
@@ -31,7 +31,7 @@ spec:
           - "index.php"
           - "-S"
           - "0.0.0.0:8081"
-       - name: mysql-container
+      - name: mysql-container
         image: mysql:latest
         env:
           - name: MYSQL_ROOT_PASSWORD
